@@ -15,7 +15,7 @@ It is capable of opening your code editor or IDE with a single voice command.
 
 # Defining Speak Function
 
-The first and foremost thing for an A.I. assistant is that it should be able to speak. To make our J.A.R.V.I.S. talk, we will make a function called speak(). This function will take audio as an argument, and then it will pronounce it.
+The first and foremost thing for an A.I. assistant is that it should be able to speak. To make our Gedian. talk, we will make a function called speak(). This function will take audio as an argument, and then it will pronounce it.
 
 ```bash
 def speak(audio):
@@ -143,7 +143,7 @@ We have successfully created our takeCommand() function. Now we are going to add
 pip install Wikipedia
 ```
  After successfully installing the Wikipedia module, import it into the program by writing an import statement.
-
+```bash
 if __name__ == "__main__":
     wishMe()
     while True:
@@ -158,6 +158,7 @@ if __name__ == "__main__":
             speak("According to Wikipedia")
             print(results)
             speak(results)
+ ```
 In the above code, we have used an if statement to check whether Wikipedia is in the user's search query or not. If Wikipedia is found in the user's search query, then two sentences from the summary of the Wikipedia page will be converted to speech with the speak function's help.
 
 31:24 – Defining Task 2: To open YouTube site in a web-browser
@@ -167,35 +168,42 @@ Code:
 
      elif 'open youtube' in query:
             webbrowser.open("youtube.com")
-Here, we are using an elif loop to check whether Youtube is in the user's query. Let' suppose the user gives a command as "J.A.R.V.I.S., open youtube." So, open youtube will be in the user's query, and the elif condition will be true.
+Here, we are using an elif loop to check whether Youtube is in the user's query. Let' suppose the user gives a command as "fGedian, open youtube." So, open youtube will be in the user's query, and the elif condition will be true.
 
-32:34 – Defining Task 3: To open Google site in a web-browser
+# Defining Task 3: To open Google site in a web-browser
+```bash
 elif 'open google' in query:
             webbrowser.open("google.com")
+ ```
 We are opening Google in a web-browser by applying the same logic that we used to open youtube. 
 
-33:37 – Defining Task 4: To play music 
+# Defining Task 4: To play music 
 To play music, we need to import a module called os. Import this module directly with an import statement.
-
+```bash
 elif 'play music' in query:
             music_dir = 'D:\\Non Critical\\songs\\Favorite Songs2'
             songs = os.listdir(music_dir)
             print(songs)    
             os.startfile(os.path.join(music_dir, songs[0]))
-In the above code, we first opened our music directory and then listed all the songs present in the directory with the os module's help. With the help of os.startfile, you can play any song of your choice. I am playing the first song in the directory. However, you can also play a random song with the help of a random module. Every time you command to play music, J.A.R.V.I.S. will play any random song from the song directory.
+ ```
+In the above code, we first opened our music directory and then listed all the songs present in the directory with the os module's help. With the help of os.startfile, you can play any song of your choice. I am playing the first song in the directory. However, you can also play a random song with the help of a random module. Every time you command to play music, Gedian. will play any random song from the song directory.
 
-36:58 – Defining Task 5: To know the current time
-  elif 'the time' in query:
+# Defining Task 5: To know the current time
+ ```bash
+ elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")    
             speak(f"Sir, the time is {strTime}")
+ ```
 In the above, code we are using the datetime() function and storing the current or live system time into a variable called strTime. After storing the time in strTime, we are passing this variable as an argument in speak function. Now, the time string will be converted into speech.
 
  
 
-38:45 – Defining Task 6: To open the VS Code Program
+# Defining Task 6: To open the VS Code Program
+ ```bash
  elif 'open code' in query:
             codePath = "C:\\Users\\Haris\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
+```
 To open the VS Code or any other application, we need the code path of the application.
 
 
@@ -211,7 +219,7 @@ After copying the target of the application, save the target into a variable. He
 
  
 
-41:05 – Defining Task 7: To send Email
+# Defining Task 7: To send Email
 To send an email, we need to import a module called smtplib.
 
 # What is smtplib?
